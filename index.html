@@ -9,6 +9,7 @@
     <div id="app">
       {{nextYear('안녕하세요')}}
       <input :type="text" :value="inputData" />
+      <a :href="getYurimLink('xururuca9797')">유림 깃허브 링크</a>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script>
@@ -21,8 +22,12 @@
           },
           inputData: "hello",
           type: "text",
+          link: "https://github.com/",
         },
         methods: {
+          getYurimLink(channel) {
+            return this.link + channel;
+          },
           // 원하는 함수
           nextYear(greeting) {
             return (
