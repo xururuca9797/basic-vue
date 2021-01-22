@@ -6,13 +6,16 @@
     <title>뷰 기초 익히기</title>
   </head>
   <body>
-    <div id="app">{{name}}</div>
+    <div id="app">{{person.name}} {{person.age}}</div>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script>
       new Vue({
         el: "#app",
         data: {
-          name: "유림 코더",
+          person: {
+            name: "유림 코더",
+            age: 25,
+          },
         },
       });
     </script>
