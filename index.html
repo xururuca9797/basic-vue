@@ -6,7 +6,10 @@
     <title>뷰 기초 익히기</title>
   </head>
   <body>
-    <div id="app">{{nextYear('안녕하세요')}}</div>
+    <div id="app">
+      {{nextYear('안녕하세요')}}
+      <input v-bind:type="text" v-bind:value="inputData" />
+    </div>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script>
       new Vue({
@@ -16,6 +19,8 @@
             name: "유림 코더",
             age: 25,
           },
+          inputData: "hello",
+          type: "text",
         },
         methods: {
           // 원하는 함수
