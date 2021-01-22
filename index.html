@@ -7,40 +7,16 @@
   </head>
   <body>
     <div id="app">
-      {{nextYear('안녕하세요')}}
-      <input :type="text" :value="inputData" />
-      <a :href="getYurimLink('xururuca9797')">유림 깃허브 링크</a>
+      <button v-on:click="alert">Click Me!</button>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script>
       new Vue({
         el: "#app",
-        data: {
-          person: {
-            name: "유림 코더",
-            age: 25,
-          },
-          inputData: "hello",
-          type: "text",
-          link: "https://github.com/",
-        },
+        data: {},
         methods: {
-          getYurimLink(channel) {
-            return this.link + channel;
-          },
-          // 원하는 함수
-          nextYear(greeting) {
-            return (
-              greeting +
-              "!" +
-              this.person.name +
-              "는 이번년도에 " +
-              (this.person.age + 1) +
-              "살 입니다."
-            );
-          },
-          otherWethod() {
-            this.nextYear();
+          alert() {
+            alert("hello!");
           },
         },
       });
