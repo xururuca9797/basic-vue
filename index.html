@@ -6,7 +6,7 @@
     <title>뷰 기초 익히기</title>
   </head>
   <body>
-    <div id="app">{{person.name}} {{person.age}}</div>
+    <div id="app">{{nextYear('안녕하세요')}}</div>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script>
       new Vue({
@@ -15,6 +15,22 @@
           person: {
             name: "유림 코더",
             age: 25,
+          },
+        },
+        methods: {
+          // 원하는 함수
+          nextYear: function (greeting) {
+            return (
+              greeting +
+              "!" +
+              this.person.name +
+              "는 이번년도에 " +
+              (this.person.age + 1) +
+              "살 입니다."
+            );
+          },
+          otherWethod: function () {
+            this.nextYear();
           },
         },
       });
