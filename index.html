@@ -7,16 +7,23 @@
   </head>
   <body>
     <div id="app">
-      <button v-on:click="alert">Click Me!</button>
+      {{year}}<br />
+      <button v-on:click="plus">더하기</button>
+      <button v-on:click="minus">빼기</button>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script>
       new Vue({
         el: "#app",
-        data: {},
+        data: {
+          year: 2021,
+        },
         methods: {
-          alert() {
-            alert("hello!");
+          plus() {
+            this.year++;
+          },
+          minus() {
+            this.year--;
           },
         },
       });
